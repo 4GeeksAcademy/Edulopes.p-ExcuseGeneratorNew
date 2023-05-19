@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -6,7 +5,6 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = () => {
-  //write your code here
   document.querySelector("#phrase").innerHTML = generateExcuse();
 };
 let generateExcuse = () => {
@@ -18,9 +16,14 @@ let generateExcuse = () => {
     "My turtle",
     "My shark"
   ];
-  let action = ["ate", "destroyed", "putted fire on", "sold"];
-  let avoid = ["my passport", "my homework", "my 4geeks project", "my macbook"];
-  let when = [
+  const action = ["ate", "destroyed", "putted fire on", "sold"];
+  const avoid = [
+    "my passport",
+    "my homework",
+    "my 4geeks project",
+    "my macbook"
+  ];
+  const when = [
     "five minutes ago",
     "10 minutes ago",
     "yesterday",
