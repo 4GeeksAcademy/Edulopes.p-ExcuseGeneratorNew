@@ -7,8 +7,8 @@ import "./assets/img/4geeks.ico";
 window.onload = () => {
   document.querySelector("#phrase").innerHTML = generateExcuse();
 };
-let generateExcuse = () => {
-  let blamer = [
+const generateExcuse = () => {
+  const blamer = [
     "My dog",
     "My platypus",
     "My hedgehog",
@@ -31,18 +31,9 @@ let generateExcuse = () => {
     "when I was born"
   ];
 
-  let blamerIndex = Math.floor(Math.random() * blamer.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let avoidIndex = Math.floor(Math.random() * avoid.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
+  const getRandomExcuse = arr => arr[Math.floor(Math.random() * arr.length)];
 
-  return (
-    blamer[blamerIndex] +
-    " " +
-    action[actionIndex] +
-    " " +
-    avoid[avoidIndex] +
-    " " +
-    when[whenIndex]
-  );
+  return `${getRandomExcuse(blamer)} ${getRandomExcuse(
+    action
+  )} ${getRandomExcuse(avoid)} ${getRandomExcuse(when)}`;
 };
